@@ -1,0 +1,62 @@
+
+{
+  "identity": {
+    "publicKey": "MIIBIjANBgkq...IDAQAB",
+    "privateKey": "MIIEvQIBADANBgkq...F6pr"
+  },
+  "hostname": "angelica",
+  "hostnameHash": "11223344",
+  "ip": "1.2.3.4",
+  "ands": {
+    "hashNode": "11.22.33.44",
+    "counterNode": "22.33.44.55",
+    "hibernationTTL": 2592000,
+    "queue": ["angelica", "angelica2", "angelica3"]
+  },
+  "snsd": [
+    {
+      "service": "_http._tcp",
+      "port": 80,
+      "target": "depausceve",
+      "priority": 10,
+      "weight": 5
+    },
+    {
+      "service": "_ftp._tcp",
+      "port": 21,
+      "target": "11.22.33.44",
+      "priority": 20,
+      "weight": 1
+    },
+    {
+      "service": "_default._tcp",
+      "port": 0,
+      "target": "1.2.3.4",
+      "priority": 0,
+      "weight": 0
+    }
+  ],
+  "ntk": {
+    "signatureAlgorithm": "RSA-SHA256",
+    "signedSNSD": true,
+    "registerNode": true,
+    "tokenID": "NTK-AGI-angelica-1122"
+  },
+  "routing": {
+    "qspnVersion": 2,
+    "routingMetric": "REM",
+    "gnodeID": [3, 41, 5],
+    "bnode": "3.41.5.1",
+    "preferredLinks": ["3.41.5.8", "3.41.5.9"],
+    "degregationFlags": {
+      "linkDown": false,
+      "lowBandwidth": false,
+      "cacheFailureMode": true
+    }
+  },
+  "dnsWrapper": {
+    "enabled": true,
+    "resolveViaSNSD": true,
+    "fallbackTTL": 60
+  }
+}
